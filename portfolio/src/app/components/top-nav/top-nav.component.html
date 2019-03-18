@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+	<!-- Name -->
+	<a class="navbar-brand" href="/">Robin Goemaat</a>
+	<!-- collapse button -->
+	<button class="navbar-toggler hidden-sm-up" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed"
+		data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div id="navbar" class="navbar-collapse collapse" [ngbCollapse]="isNavbarCollapsed">
+		<!-- list of navigation items -->
+		<ul class="navbar-nav">
+			<li class="nav-item">
+				<a class="nav-link" href="/">Home</a>
+			</li>
+			<li ngbDropdown class="nav-item">
+				<a ngbDropdownToggle href="#" class="nav-link" id="project-dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Projects
+				</a>
+				<!-- list of projects -->
+				<div ngbDropdownMenu aria-labelledby="project-dropdown-toggle">
+					<a ngbDropdownItem class="dropdown-item" href="/RetroRocket">Retro Rocket</a>
+					<a ngbDropdownItem class="dropdown-item" href="/HoverRacer">Hover Racer</a>
+					<a ngbDropdownItem class="dropdown-item" href="/CyberCrawler">Cyber Crawler</a>
+					<a ngbDropdownItem class="dropdown-item" href="/FutureRunner">Future Runner</a>
+					<a ngbDropdownItem class="dropdown-item" href="/SphereShifter">Sphere Shifter</a>
+					<a ngbDropdownItem class="dropdown-item" href="/CyborgSam">Cyborg Sam</a>
+				</div>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="contact">Contact</a>
+			</li>
+		</ul>
+	</div>
+</nav>
