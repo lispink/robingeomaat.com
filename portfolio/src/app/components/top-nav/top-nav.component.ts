@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
 	selector: 'app-top-nav',
@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopNavComponent implements OnInit {
 	isNavbarCollapsed = true;
+	@Input() title: string;
+	@Input() links: Array<Array<{ text: string, link: any[] }>>;
+
 	constructor() { }
 
 	ngOnInit() {
+		this.links = [
+			[{text: 'contact', link: [ 'contact' ]}],
+		];
 	}
 
 }
